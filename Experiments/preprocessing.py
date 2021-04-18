@@ -18,7 +18,7 @@ def preprocess_image(arr):
     regions = measure.regionprops(labels)
     for region in regions:
         Box = region.bbox
-        print(Box)
+
 
     targets = []
     for region in regions:
