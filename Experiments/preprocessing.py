@@ -16,10 +16,6 @@ def preprocess_image(arr):
     labels = measure.label(dialated)
     #label_vals = np.unique(labels)
     regions = measure.regionprops(labels)
-    for region in regions:
-        Box = region.bbox
-
-
     targets = []
     for region in regions:
         Box = region.bbox
