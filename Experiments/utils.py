@@ -1,5 +1,5 @@
 import tensorflow as tf
 import numpy as np
-def getFile(path):
-    img = np.load(path)
-    return img
+def getFile(orignal_image,label):
+    img = np.load(orignal_image)
+    return img,label
