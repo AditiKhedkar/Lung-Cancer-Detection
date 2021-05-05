@@ -3,7 +3,6 @@ import pickle
 
 import jsonpickle as jsonpickle
 from flask import  Flask,request,Response
-from PIL import Image,ImageOps
 import numpy as np
 import preprocessing
 import tensorflow as tf
@@ -24,7 +23,7 @@ def inference(img):
     output = output[0].tolist()
     opclass = encoder.classes_[output.index(max(output))]
 
-    return opclass
+    return opclass,output
 @app.route('/inference', methods=['POST'])
 def test():
     r = request
@@ -37,10 +36,10 @@ def test():
     array_image = np.array(img.pixel_array)
     # do some fancy processing here....
     img = preprocessing.preprocess_image(array_image)
-    result = inference(img)
+    result,output = inference(img)
     # build a response dict to send back to client
-    response = {'message': result
-                }
+    response = {'message': result,
+                'confidence':output}
     # encode response using jsonpickle
     response_pickled = jsonpickle.encode(response)
 
