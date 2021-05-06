@@ -2,6 +2,7 @@
  So this is a   repository where we'll first manage the backend ,then the frontend .
  Cheers!
 ## Setup
+ - 0) Install Anaconda
  - 1) Get from github, duh!
  - 2) Go to project root and run `conda env create --file environment.yaml`
  - 3) Change directory to server `cd Backend`
