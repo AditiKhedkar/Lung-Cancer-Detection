@@ -10,7 +10,7 @@ import pydicom
 app = Flask(__name__)
 
 encoder = pickle.load(open("label_encoder", 'rb'))
-model = tf.keras.models.load_model("./acc89_valacc84-1/")
+model = tf.keras.models.load_model("./acc89_valacc84-2/")
 def inference(img):
     img = tf.image.resize(img.reshape((1,512, 512, 1)), (256, 256))
 
