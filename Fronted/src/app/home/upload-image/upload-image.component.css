@@ -1,0 +1,267 @@
+.upload-image-wrapper{
+    background-image: url("../../../assets/Background 2.png");
+    width: 100%;
+    margin: 0 auto;
+   background-repeat: no-repeat;
+    background-size: cover;
+    height: 720px;
+}
+.upload-header{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+
+    height: 88px;
+    left: 0px;
+    top: 0px;
+
+    /* White */
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+.title{
+    margin: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  
+    align-items: center;
+    text-align: center;
+    color: #1D1D1F;
+   
+ }
+ .title-div{
+    display: inline-block;
+     position: absolute;
+     top: 30px;
+     left: 6.25%
+ }
+ .lung-right{
+    vertical-align: text-bottom;
+    margin-right: 16px;
+ }
+ .lung-left{
+    vertical-align: text-bottom;
+ }
+ .Login-button{
+    display: inline-block;
+    padding: 8px 32px;
+    position: absolute;
+    width: 61px;
+    /* height: 8px; */
+    left: 83.98%;
+    top: 24px;
+    background: #8C30F5;
+    border-radius: 6px;
+} 
+ .button-text{
+    position: static;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #FFFFFF;
+    margin: 0px;
+   
+ }
+ .upload-Image-Main
+ {
+     width: 100%;
+     display: inline-block;
+ }
+ .upload-div
+ {
+    position: absolute;
+    width: 27.5%;
+    height: 432px;
+    left: 6.25%;
+    top: 134px;
+    
+    /* White */
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+ }
+ .upload-div2{
+    height: 496px;
+    position: absolute;
+    width: 27.5%;
+  
+    left: 6.25%;
+    top: 134px;
+    
+    /* White */
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+ }
+ .result-div
+ {
+    position: absolute;
+    width: 57.5%;
+    height: 496px;
+    left: 36.25%;
+    top: 134px;
+    
+    /* White */
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    
+ }
+ .upload-button{
+   
+    padding: 8px 32px;
+    position: absolute;
+    width: 22.8%;
+    height: 24px;
+    left: 6.25%;
+    top: 590px;
+    background: #8C30F5;
+    border-radius: 6px;
+}
+.upload-sub{
+    padding: 6.81%
+}
+.upload-title{
+   margin-bottom: 18px;
+}
+.upload-text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #8C30F5;
+    margin:0
+}
+.image-div{
+  
+width: 100%;
+height: 304px;
+left: 104px;
+top: 210px;
+
+/* background: url("../../../assets/ambi 1.png"); */
+border-radius: 12px;
+margin-bottom: 16px;
+}
+.sample{
+    
+width: 304px;
+height: 16px;
+left: 104px;
+top: 526px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+font-feature-settings: 'salt' on, 'liga' off;
+
+/* Dark Grey 3 */
+
+color: #2C2C2E;
+}
+.result-display
+{
+   align-items: center;
+   padding: 8px 32px;
+   /* position: absolute; */
+   width: 304px;
+   height: 40px;
+   left: 104px;
+   top: 530px;
+   background: #FFFFFF;
+   border: 1px solid #8C30F5;
+   box-sizing: border-box;
+   border-radius: 6px;
+}
+.result-display-text{
+   
+   /* Label / Large Label */
+   
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+   /* identical to box height, or 150% */
+   
+   text-align: center;
+   font-feature-settings: 'salt' on, 'liga' off;
+   
+   /* Purple */
+   
+   color: #8C30F5;
+   margin: 0px;
+   
+   
+
+}
+.percent
+{
+   color: #8C30F5;
+   font-weight: 600;
+}
+.previousText{
+
+   position: absolute;
+   /* width: 154px; */
+   height: 20px;
+   left:  79.53%;
+   top: 654px;
+   
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   /* identical to box height, or 143% */
+   
+   text-align: right;
+   font-feature-settings: 'salt' on, 'liga' off;
+   
+   /* Dark Grey 3 */
+   
+   color: #2C2C2E;
+   margin:0
+}
+.gobackimage{
+   margin-left: 16px;
+ }
+ .ambiguoustext{
+  
+   width: 304px;
+   height: 20px;
+   left: 104px;
+   top: 586px;
+   
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   /* identical to box height, or 143% */
+   
+   font-feature-settings: 'salt' on, 'liga' off;
+   
+   /* Red */
+   
+   color: #B53030;
+ }
+ 
+ 

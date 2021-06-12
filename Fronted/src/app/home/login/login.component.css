@@ -1,0 +1,196 @@
+.loginWrapper{
+    background-image: url("../../../assets/Background 2.png");
+    width: 100%;
+    margin: 0 auto;
+   background-repeat: no-repeat;
+    background-size: cover;
+    height: 720px;
+} 
+.gobackText{
+    margin: 0px;
+   
+    position: absolute;
+    left: 36px;
+    top: 32px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #2C2C2E;
+    cursor: pointer;
+ }
+ .gobackimage{
+   margin-right: 11.33px;
+ }
+ .login-container{
+    position: absolute;
+    width: 416px;
+    height: 324px;
+    left: 33.75%;
+    top: 198px;
+    
+    /* White */
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+ }
+ .lung-right{
+  vertical-align: text-bottom;
+  margin-right: 16px;
+}
+.lung-left{
+  vertical-align: text-bottom;
+}
+.title{
+  
+
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+align-items: center;
+text-align: center;
+
+/* Dark Grey 1 */
+
+color: #1D1D1F;
+ 
+}
+.titletext{
+  margin-top: 32px;
+  text-align: center;
+}
+.input-box{
+  align-items: center;
+  padding: 10px 16px;
+  /* position: absolute; */
+  width: 352px;
+  height: 40px;
+  /* left: 464px; */
+  /* top: 298px; */
+  background: #FFFFFF;
+  border: 1px solid #969696;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+
+
+font-feature-settings: 'salt' on, 'liga' off;
+
+
+color: #1D1D1F;
+}
+.inputdiv{
+  text-align: center;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+.inputdiv2{
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-button{
+  
+  padding: 8px 32px;
+  width: 288px;
+  height: 24px;
+  background: #8C30F5;
+  border-radius: 6px;
+  text-align: center;
+  margin-left: 32px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.button-text{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  
+  text-align: center;
+  font-feature-settings: 'salt' on, 'liga' off;
+  
+  /* Default / White */
+  
+  color: #FFFFFF;
+  margin: 0px;
+
+}
+.bottomtext{
+margin: 0px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+color: #1D1D1F;
+
+}
+.createaccount{
+ color: darkblue;
+ cursor: pointer;
+}
+.Error{
+  font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B53030;
+    margin-left: 32px;
+    margin-top: 5px;
+    /* margin: 0; */
+    text-align: left;
+
+}
+.ErrorMsg{
+  font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B53030;
+    margin-left: 32px;
+    margin-top: 5px;
+    /* margin: 0; */
+    text-align: left;
+}
+.MSg{
+  font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: blue;
+    margin-left: 32px;
+    margin-top: 5px;
+    /* margin: 0; */
+    text-align: left;
+}
+.msgimp{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: blue;
+  margin-left: 32px;
+  margin-top: 5px;
+  /* margin: 0; */
+  text-align: left;
+}

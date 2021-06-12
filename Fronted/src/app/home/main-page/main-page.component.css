@@ -1,0 +1,97 @@
+.main-page-wrapper{
+ 
+   width:100%;
+   margin: 0 auto;
+   
+}
+#main{
+   background-image: url("../../../assets/Background 1.png");
+   background-repeat: no-repeat;
+    background-size: cover;
+    height: 720px;
+}
+.header{
+   width: 100%;
+   display: inline-block;
+}
+.title{
+   margin: 0px;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 28px;
+ 
+   align-items: center;
+   text-align: center;
+   color: #1D1D1F;
+  
+}
+.title-div{
+   display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+}
+
+.Login-button{
+   display: inline-block;
+    align-items: center;
+    padding: 8px 32px;
+    width: 107px;
+    height: 40px;
+    /* left: 1093px; */
+    right: 80px;
+    top: 24px;
+    background: #8C30F5;
+    border-radius: 6px;
+    position: absolute;
+    cursor: pointer;
+   
+}
+.button-text{
+   position: static;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: center;
+   font-feature-settings: 'salt' on, 'liga' off;
+   color: #FFFFFF;
+   margin: 0px;
+   margin-top: 6px;
+}
+.main-title{
+   position: absolute;
+   width: 730px;
+   height: 176px;
+   left: 80px;
+   top: 208px;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 72px;
+   line-height: 88px;
+   font-feature-settings: 'salt' on, 'liga' off;
+   color: #1D1D1F;
+}
+.TryDemo-button{
+   align-items: center;
+   padding: 8px 32px;
+   position: absolute;
+   width: 139px;
+   height: 40px;
+   left: 80px;
+   top: 416px;
+   background: #8C30F5;
+   border-radius: 6px;
+   cursor: pointer;
+}
+.lung-right{
+   vertical-align: text-bottom;
+   margin-right: 16px;
+}
+.lung-left{
+   vertical-align: text-bottom;
+}

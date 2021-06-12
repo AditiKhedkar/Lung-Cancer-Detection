@@ -1,0 +1,91 @@
+<div class="display-wrapper">
+    <!-- default not detected -->
+    <div class="display-reduce-lung" *ngIf="option=='default'">
+       <p class="upload-text">How to reduce the risk of Lung Cancer?</p>
+       <div class="reduce-text">
+           <div class="display-line" *ngFor="let option of reduceCancer|keyvalue">
+              <p class="paragraph"><span class="heading">{{option.key}}</span> 
+               {{option.value}}
+            </p>
+           </div>
+       </div>
+    </div>
+
+    <!-- Cancer Detected -->
+    <div class="display-reduce-lung" *ngIf="option=='cancer'" >
+        <p class="upload-text">You need to seek medical help as soon as possible.</p>
+        <div class="reduce-text">
+            <p class="paragraph margin1">{{cancerText}}</p>
+            <p class="typetext">Types of treatments:</p>
+            <div class="display-line" *ngFor="let option of treatment|keyvalue">
+                <p class="paragraph"><span class="heading">{{option.key}}</span> 
+                 {{option.value}}
+              </p>
+             </div>
+             <p class="typetext2">Please visit your closest cancer specialty hospital as soon as you can.</p>
+        </div>
+        
+     </div>
+
+
+    <!-- Cancer ambiguous-->
+    <div class="display-reduce-lung" *ngIf="option=='ambiguous'">
+        <p class="upload-text">Please seek a proper medical scan from a cancer specialty hospital.</p>
+        <div class="reduce-text">
+            <p class="paragraph margin1">
+                Our algorithm could not accurately detect whether the uploaded CT scan image shows signs of Lung Cancer. We highly recommend you to get a thorough test at a specialty hospital.
+            </p>
+            <p class="paragraph margin1">
+                {{cancerText}}
+            </p>
+            <p class="typetext">Types of treatments:</p>
+            <div class="display-line" *ngFor="let option of treatment|keyvalue">
+                <p class="paragraph"><span class="heading">{{option.key}}</span> 
+                 {{option.value}}
+              </p>
+             </div>
+        </div>
+        
+     </div>
+     <!-- previous results -->
+     <div class="display-reduce-lung" *ngIf="option=='previous'">
+       <div class="table-heading">
+           <div class="firstcol">
+             <p class="table-head">Scan Date</p>
+           </div>
+           <div class="secondcol">
+             <p class="table-head">Uploaded Ct Scan Image</p>
+           </div>
+           <div class="thirdcol">
+            <p class="table-head">Cancer Analysis</p>
+          </div>
+          <div class="fourthcol">
+            <p class="table-head">Accuracy</p>
+          </div>
+          <div class="fifthcol">
+            <p class="table-head"></p>
+          </div>
+       </div>
+
+       <!-- content -->
+       <div class="table-content" *ngFor="let item of previousResult">
+        <div class="firstcol">
+          <p class="table-text">{{item.date}}</p>
+        </div>
+        <div class="secondcol">
+          <p class="table-text">{{item.imgPath}}</p>
+        </div>
+        <div class="thirdcol">
+         <p class="table-text">{{item.result}}</p>
+       </div>
+       <div class="fourthcol">
+         <p class="table-text">{{item.accuracy}}</p>
+       </div>
+       <div class="fifthcol">
+         <p class="table-text"><img src="../../../assets/Vector.png"></p>
+       </div>
+       </div>
+     </div>
+
+
+</div>

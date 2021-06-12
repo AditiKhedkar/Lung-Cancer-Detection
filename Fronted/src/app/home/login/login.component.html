@@ -1,0 +1,30 @@
+<div class="loginWrapper">
+    
+  <p class="gobackText"  (click)="goBack()"><img src="../../../assets/back.png" class="gobackimage">Go Back to Homepage</p>
+  <div class="login-container">
+      <div class="titletext"> 
+        <img src="../../../assets/lungleft.png" class="lung-left">       
+        <img src="../../../assets/lungright.png" class="lung-right">
+        <span class="title">Lung Cancer Detection</span> 
+      </div>
+     
+      <div class="inputdiv">
+        <input type="email" class="input-box" placeholder="Enter Email..." *ngIf="!create" [(ngModel)]="enterEmail" (input)="validPwd()">
+        <input type="email" class="input-box" placeholder="Enter Your Email Address..." *ngIf="create" [(ngModel)]="Email">
+      </div>
+      <div class="inputdiv2">
+        <input type="password" class="input-box" placeholder="Enter Password..." *ngIf="!create" [(ngModel)]="enterPassword">
+        <input type="text" class="input-box" placeholder="Enter Your Password..." *ngIf="create" 
+        (input)="validatePwd()" [(ngModel)]="password" maxlength="8">
+        <p class="ErrorMsg" *ngIf="create && !validPassword">{{passError}}</p>
+        <p class="ErrorMsg" *ngIf="!create && error">{{loginError}}</p>
+        <p class="MSg" *ngIf="created">{{createMSg}}<span class="msgimp" (click)=" createAccount()">GO TO LOGIN</span></p>
+      </div>
+      <div class="login-button">
+         <p class="button-text" *ngIf="!create"  (click)="login()">Login</p>
+         <p class="button-text" *ngIf="create" (click)="createUserAccount()">Create Account</p>
+      </div>
+      <p class="bottomtext" *ngIf="!create">Don't have an account?<span class="createaccount" (click)="createAccount()" *ngIf="!create">Create Account</span></p>
+      <p class="bottomtext" *ngIf="create">Already have an account?<span class="createaccount" *ngIf="create" (click)="createAccount()">Login</span></p>
+  </div>
+</div>

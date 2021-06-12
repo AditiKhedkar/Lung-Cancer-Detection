@@ -1,0 +1,178 @@
+.display-wrapper{
+    width: 93.47%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+    /* width: 688px; */
+}
+.display-reduce-lung{
+    width: 100%;
+}
+.display-reduce-lung-result{
+    width: 100%;
+}
+.upload-text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #8C30F5;
+}
+.reduce-text{
+    width: 100%;
+    margin-top: 24px;
+}
+.display-line{
+    margin-bottom: 16px;
+}
+.paragraph{
+    
+    width: 688px;
+  
+    left: 488px;
+    top: 210px;
+    
+    font-family: Inter;
+    font-style: normal;
+    
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    font-feature-settings: 'salt' on, 'liga' off;
+    
+    /* Dark Grey 3 */
+    
+    color: #2C2C2E;
+    margin: 0;
+}
+.margin1{
+    margin-bottom: 10px;
+}
+
+.heading{
+    font-weight: bold;
+}
+.typetext{
+    width: 688px;
+  
+    left: 488px;
+    top: 210px;
+    
+    font-family: Inter;
+    font-style: normal;
+    
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    /* or 143% */
+    
+    font-feature-settings: 'salt' on, 'liga' off;
+    
+    /* Dark Grey 3 */
+    
+    color: #8C30F5;
+    margin: 0;
+    margin-bottom: 18px;
+}
+.typetext2{
+    width: 688px;
+  
+    left: 488px;
+    top: 210px;
+    
+    font-family: Inter;
+    font-style: normal;
+    
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    /* or 143% */
+    
+    font-feature-settings: 'salt' on, 'liga' off;
+    
+    /* Dark Grey 3 */
+    
+    color: #8C30F5;
+    margin: 0;
+    margin-bottom: 18px;
+    margin-top: 88px;
+}
+.table-heading{
+    width: 100%;
+    display: inline-block;
+    /* width: 688px; */
+    /* height: 0px; */
+    /* left: 488px; */
+    /* top: 220px; */
+    padding-bottom: 16px;
+    border-bottom: 2px solid #8C30F5;
+}
+.firstcol{
+ width: 20%;
+ display: inline-block;
+}
+.thirdcol{
+    width: 25%;
+    display: inline-block;
+   }
+.secondcol{
+width: 30%;
+display: inline-block;
+}
+.fourthcol{
+    width: 15%;
+display: inline-block;
+}
+.fifthcol{
+    width: 5%;
+display: inline-block;
+}
+
+.table-head{
+    margin: 0;
+   
+
+height: 16px;
+left: 512px;
+top: 188px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+
+/* Purple */
+
+color: #8C30F5;
+}
+.table-content{
+    width: 100%;
+    display: inline-block;
+    /* width: 688px; */
+    padding-top: 32px;
+}
+.table-text{
+   
+    height: 16px;
+    left: 512px;
+    top: 252px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    
+    
+    /* Dark Grey 1 */
+    
+    color: #1D1D1F;
+    margin: 0;
+}
