@@ -11,6 +11,7 @@ import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from 'angularfire2/auth'
 import { AngularFirestoreModule} from '@angular/fire/firestore';
+
 // import { AngularFireDatabase } from '@angular/fire/database';
 
 @NgModule({

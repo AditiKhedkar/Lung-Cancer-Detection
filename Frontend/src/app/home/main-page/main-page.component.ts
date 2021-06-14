@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataserviceService } from 'src/app/dataservice.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private dataService:DataserviceService) { }
 
   ngOnInit() {
   }
@@ -16,5 +17,11 @@ export class MainPageComponent implements OnInit {
   {
     console.log("Login");
     this.router.navigateByUrl("login");
+  }
+  tryDemo()
+  {
+    this.dataService.mode="demo"
+    this.router.navigateByUrl("demo");
+
   }
 }

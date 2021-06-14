@@ -7,6 +7,8 @@ import { Subject } from 'rxjs';
 })
 export class DataserviceService {
   resultCollection: AngularFirestoreCollection<any>;
+  mode=""
+  currentUser:any
   constructor(private afs:AngularFirestore) { 
     this.resultCollection=afs.collection('Cancer-Result');
   }

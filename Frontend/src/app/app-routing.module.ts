@@ -8,11 +8,15 @@ import { UploadImageComponent } from './home/upload-image/upload-image.component
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main-page', pathMatch: 'full' },
-  { path: 'main-page',component:MainPageComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home',component:MainPageComponent },
   { path: 'login',component:LoginComponent },
   {
-    path:'upload-image', component:UploadImageComponent
+    path:':userid/upload-image', component:UploadImageComponent
+  },
+  {
+    path:'demo',
+    component:UploadImageComponent
   }
 ];
 

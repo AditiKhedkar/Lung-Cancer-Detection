@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   //  this.create=false
  }
  goBack(){
-   this.router.navigateByUrl("main-page")
+   this.router.navigateByUrl("home")
  }
  validatePwd(){
    
@@ -61,9 +61,10 @@ export class LoginComponent implements OnInit {
  login()
  {
   this.afAuth.auth.signInWithEmailAndPassword(this.enterEmail,this.enterPassword).then((usercred)=>{
-   this.user=usercred.user;
+   this.user=usercred.user.uid;
    console.log(this.user)
-   this.router.navigateByUrl("upload-image")
+   this.dataservice.currentUser=this.user;
+   this.router.navigateByUrl(this.user+"/upload-image")
     
  }).catch((error) => {
   var errorCode = error.code;

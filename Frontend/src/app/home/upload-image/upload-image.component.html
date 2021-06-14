@@ -6,9 +6,12 @@
             <img src="../../../assets/lungright.png" class="lung-right">
             <span class="title">Lung Cancer Detection</span>
         </div>
-        <div class="Login-button">
+        <div class="Login-button" (click)="signOut()" *ngIf="!demo">
             <p class="button-text">Log Out</p>
        </div>
+       <div class="Login-button" (click)="GoHome()" *ngIf="demo">
+        <p class="button-text">Home</p>
+   </div>
     </div>
     <div class="upload-Image-Main">
        
@@ -18,10 +21,10 @@
                     
                     <span class="upload-text" *ngIf="!upload">Upload a CT Scan Image</span>
                     <p class="upload-text" *ngIf="upload" (click)="Reset()">Reset </p>
-                    <span class="upload-text" *ngIf="upload">Image scan was successful! </span>
+                    <span class="upload-text" *ngIf="upload">Image scan was successfull! </span>
                 </div>
                 <div class="image-div">
-                  <img src="../../../assets/ambi 1.png">
+                  <img [src]="imgSrc">
                 </div>
                 <div class="result-display" *ngIf="upload">
                    <p class="result-display-text">{{result}}</p>
@@ -32,7 +35,9 @@
               </div>
         
         <div class="upload-button" *ngIf="!upload" >
-            <p class="button-text" (click)="uploadImage()" >Upload CT Scan Image(DICOM)</p>
+            <input #fileInput type="file" (change)="OnChange($event)" style="display:none"/>
+            <p class="loader" *ngIf="spin"></p>
+            <p class="button-text" (click)="fileInput.click()" >Upload CT Scan Image(DICOM)</p>
         </div>
         <!-- diaply result component -->
         <div class="result-div">
@@ -40,5 +45,5 @@
         </div>
 
     </div>
-    <p class="previousText" (click)="emit('previous')" >Check previous results<img src="../../../assets/previous.png" class="gobackimage"></p>
+    <p *ngIf="!demo" class="previousText" (click)="emit('previous')" >Check previous results<img src="../../../assets/previous.png" class="gobackimage"></p>
 </div>

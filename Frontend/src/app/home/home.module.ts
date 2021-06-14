@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from 'src/environments/environment';
+import {HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
  
@@ -19,7 +20,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule
   ]
 })
 export class HomeModule { }
