@@ -110,6 +110,7 @@ color: #1D1D1F;
   margin-left: 32px;
   margin-bottom: 16px;
   cursor: pointer;
+  display: inline-block;
 }
 
 .button-text{
@@ -127,7 +128,7 @@ color: #1D1D1F;
   
   color: #FFFFFF;
   margin: 0px;
-
+  display: inline-block;
 }
 .bottomtext{
 margin: 0px;
@@ -193,4 +194,26 @@ color: #1D1D1F;
   margin-top: 5px;
   /* margin: 0; */
   text-align: left;
+  cursor: pointer;
+}
+.loader {
+  margin: 0;
+  border: 03px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 03px solid black;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -25,20 +25,38 @@ export class DisplayResultComponent implements OnInit {
     "04. Targeted therapy. ":"Using drugs to block the growth and spread of cancer cells. The drugs can be pills you take or medicines given in your veins."
   }
   cancerText="Lung cancer is treated in several ways, depending on the type of lung cancer and how far it has spread. People with non-small cell lung cancer can be treated with surgery, chemotherapy, radiation therapy, targeted therapy, or a combination of these treatments. People with small cell lung cancer are usually treated with radiation therapy and chemotherapy."
-  previousResult=[{date:'02/06/2021',imgPath:'uploaded_image_name.dicom',result:'Cancer not detected',accuracy:'83.57%'},
-                    {date:'02/06/2021',imgPath:'uploaded_image_name.dicom',result:'Cancer not detected',accuracy:'83.57%'}
+  previousResult=[{date:'02/06/2021',imgSrc:'uploaded_image_name.dicom',result:'Cancer not detected',accuracy:'83.57%'},
+                    {date:'02/06/2021',imgSrc:'uploaded_image_name.dicom',result:'Cancer not detected',accuracy:'83.57%'}
                   ]
   
   
   constructor(private dataService:DataserviceService) 
   { 
-    this.dataService.configObservable.subscribe(value => {
+    this.dataService.configObservable.subscribe((value:any) => {
       console.log("display component",value);
       this.option = value;
+      if(this.option=='previous')
+      {
+        this.previousResult=this.dataService.putResults()
+      }
+    })
+    this.dataService.resultObservable.subscribe((value:any)=>{
+      console.log("result",value);
+      this.previousResult=value;
     })
   }
 
   ngOnInit() {
+    if(this.dataService.currentUser)
+    {
+      this.previousResult=this.dataService.currentUserResults
+    }
+  }
+  deleteResult(i)
+  {
+    console.log(i,"index ");
+    this.previousResult.splice(i,1);
+    this.dataService.deleteResult(i);
   }
   
 }

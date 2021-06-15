@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -16,6 +17,7 @@ export class UploadImageComponent implements OnInit {
   previous=true;
   demo=false
   spin=false;
+  currentUser;
   imgSrc:any="../../../assets/ambi 1.png"
   constructor(private dataService:DataserviceService,
     private afAuth:AngularFireAuth,private router:Router,
@@ -30,6 +32,7 @@ export class UploadImageComponent implements OnInit {
     else
     {
       this.demo=false
+      this.currentUser=this.dataService.currentUser
     }
   }
   upload=false;
@@ -39,6 +42,7 @@ export class UploadImageComponent implements OnInit {
   }
   emit(val)
    { // your value you want to emit
+    
     console.log("upload",val)
     this.previous=false
     this.dataService.emitConfig(val);
@@ -66,6 +70,17 @@ export class UploadImageComponent implements OnInit {
     
     console.log(event.target.files[0])
     let file:File=event.target.files[0];
+    let  currentDate = new Date();
+
+    const cValue = formatDate(currentDate, 'dd-MM-yyyy', 'en-US');
+    console.log(cValue)
+    let newResult={
+      date:cValue,
+      imgSrc:file.name,
+      result:"",
+      accuracy:"88%"
+    }
+   
     this.spin=true;
     // /let f=URL.createObjectURL(event.target.files[0]);
     // this.imgSrc=this.sanitizer.bypassSecurityTrustUrl(f);
@@ -87,18 +102,21 @@ export class UploadImageComponent implements OnInit {
            this.emit("cancer")
       }else if(res.message=="False")
       {
-         this.result="Cancer was not Detected"
+         this.result="Cancer not Detected"
          this.emit("default")
       }else{
-          this.result="Sorry its Ambiguous"
+          this.result="Ambiguous"
           this.emit("ambiguous")
       }
+      newResult.result=this.result;
+         
       this.upload=this.upload?false:true;
       this.spin=false
       event=null
       if(!this.demo)
       {
         //date imgsrc reult accuracy
+        this.dataService.addCutomerResult(this.currentUser,newResult)
       }
     })
     

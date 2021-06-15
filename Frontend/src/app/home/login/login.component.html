@@ -20,10 +20,16 @@
         <p class="ErrorMsg" *ngIf="!create && error">{{loginError}}</p>
         <p class="MSg" *ngIf="created">{{createMSg}}<span class="msgimp" (click)=" createAccount()">GO TO LOGIN</span></p>
       </div>
-      <div class="login-button">
-         <p class="button-text" *ngIf="!create"  (click)="login()">Login</p>
-         <p class="button-text" *ngIf="create" (click)="createUserAccount()">Create Account</p>
+      <div class="login-button" *ngIf="create" (click)="createUserAccount()">
+         <p class="loader" *ngIf="spin"></p>
+         <!-- <p class="button-text" *ngIf="!create"  (click)="login()">Login</p> -->
+         <p class="button-text" *ngIf="create">Create Account</p>
       </div>
+      <div class="login-button" *ngIf="!create"  (click)="login()">
+        <p class="loader" *ngIf="spin"></p>
+        <p class="button-text" *ngIf="!create">Login</p>
+        <!-- <p class="button-text" *ngIf="create" (click)="createUserAccount()">Create Account</p> -->
+     </div>
       <p class="bottomtext" *ngIf="!create">Don't have an account?<span class="createaccount" (click)="createAccount()" *ngIf="!create">Create Account</span></p>
       <p class="bottomtext" *ngIf="create">Already have an account?<span class="createaccount" *ngIf="create" (click)="createAccount()">Login</span></p>
   </div>

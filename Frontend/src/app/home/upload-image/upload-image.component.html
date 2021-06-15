@@ -34,10 +34,10 @@
                 </div>
               </div>
         
-        <div class="upload-button" *ngIf="!upload" >
+        <div class="upload-button" *ngIf="!upload" (click)="fileInput.click()" >
             <input #fileInput type="file" (change)="OnChange($event)" style="display:none"/>
             <p class="loader" *ngIf="spin"></p>
-            <p class="button-text" (click)="fileInput.click()" >Upload CT Scan Image(DICOM)</p>
+            <p class="button-text"  >Upload CT Scan Image(DICOM)</p>
         </div>
         <!-- diaply result component -->
         <div class="result-div">

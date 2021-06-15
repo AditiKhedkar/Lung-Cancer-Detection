@@ -31,11 +31,14 @@ export class LoginComponent implements OnInit {
  newUser=""
  created=false;
  createMSg=""
+ spin=false
  createAccount()
  {
    this.create=this.create?false:true;
    console.log(this.create);
    this.created = false;
+   this.enterEmail="";
+   this.enterPassword=""
   //  this.create=false
  }
  goBack(){
@@ -60,10 +63,13 @@ export class LoginComponent implements OnInit {
  }
  login()
  {
+   console.log("loginmail")
+   this.spin=true
   this.afAuth.auth.signInWithEmailAndPassword(this.enterEmail,this.enterPassword).then((usercred)=>{
    this.user=usercred.user.uid;
    console.log(this.user)
    this.dataservice.currentUser=this.user;
+   this.dataservice.getResults();
    this.router.navigateByUrl(this.user+"/upload-image")
     
  }).catch((error) => {
@@ -89,16 +95,18 @@ this.passError="";
  }
  createUserAccount()
  {
+   this.spin=true;
   this.afAuth.auth.createUserWithEmailAndPassword(this.Email,this.password).then((usercred)=>{
     this.newUser=usercred.user;
     let customer={
       uid:this.newUser,
       email:this.Email
     }
+    this.spin=false
     this.created=true;
     this.createMSg="Account Created Successfully"
     
-    this.dataservice.insertCustomer({uid:usercred.user.uid,email:this.Email},usercred.user.uid)
+    this.dataservice.insertCustomer({uid:usercred.user.uid,email:this.Email,results:[]},usercred.user.uid)
     console.log(usercred.user.uid)
  
  }).catch((error) => {

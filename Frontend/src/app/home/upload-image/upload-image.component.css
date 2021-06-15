@@ -226,7 +226,7 @@ color: #2C2C2E;
    font-weight: 600;
 }
 .previousText{
-
+   cursor: pointer;
    position: absolute;
    /* width: 154px; */
    height: 20px;

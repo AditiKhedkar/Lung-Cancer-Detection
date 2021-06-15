@@ -68,12 +68,12 @@
        </div>
 
        <!-- content -->
-       <div class="table-content" *ngFor="let item of previousResult">
+       <div class="table-content" *ngFor="let item of previousResult;let i=index">
         <div class="firstcol">
           <p class="table-text">{{item.date}}</p>
         </div>
         <div class="secondcol">
-          <p class="table-text">{{item.imgPath}}</p>
+          <p class="table-text">{{item.imgSrc}}</p>
         </div>
         <div class="thirdcol">
          <p class="table-text">{{item.result}}</p>
@@ -82,7 +82,7 @@
          <p class="table-text">{{item.accuracy}}</p>
        </div>
        <div class="fifthcol">
-         <p class="table-text"><img src="../../../assets/Vector.png"></p>
+         <p class="table-text"><img src="../../../assets/Vector.png" (click)="deleteResult(i)"></p>
        </div>
        </div>
      </div>
