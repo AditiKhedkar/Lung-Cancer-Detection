@@ -4,7 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { DataserviceService } from 'src/app/dataservice.service';
-import { runInThisContext } from 'vm';
+
 
 @Component({
   selector: 'app-upload-image',

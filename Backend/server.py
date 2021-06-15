@@ -11,6 +11,13 @@ app = Flask(__name__)
 
 encoder = pickle.load(open("label_encoder", 'rb'))
 model = tf.keras.models.load_model("./acc89_valacc84-2/")
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    header['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+    header['Access-Control-Allow-Methods'] = 'OPTIONS, HEAD, GET, POST, DELETE, PUT'
+    return response
 def inference(img):
     img = tf.image.resize(img.reshape((1,512, 512, 1)), (256, 256))
 
@@ -48,4 +55,4 @@ def test():
 
 
 # start flask app
-app.run(host="0.0.0.0", port=5000)
+app.run(port=5000)
