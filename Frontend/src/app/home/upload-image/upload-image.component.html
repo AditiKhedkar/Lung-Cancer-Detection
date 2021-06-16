@@ -30,7 +30,7 @@
                    <p class="result-display-text">{{result}}</p>
                 </div>
                 <p class="sample" *ngIf="!upload">Fig. Sample DICOM image</p>
-                <p class="sample" *ngIf="upload">The prediction accuracy value is: <span class="percent">83.57%</span></p>
+                <p class="sample" *ngIf="upload">The prediction accuracy value is: <span class="percent">{{percent}}</span></p>
                 </div>
               </div>
         

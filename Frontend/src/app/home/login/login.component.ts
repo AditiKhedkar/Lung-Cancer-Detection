@@ -73,6 +73,7 @@ export class LoginComponent implements OnInit {
    this.router.navigateByUrl(this.user+"/upload-image")
     
  }).catch((error) => {
+   this.spin=false
   var errorCode = error.code;
   var errorMessage = error.message;
   console.log(error)
@@ -110,6 +111,7 @@ this.passError="";
     console.log(usercred.user.uid)
  
  }).catch((error) => {
+   this.spin=false
   var errorCode = error.code;
   var errorMessage = error.message;
   if(errorCode=="auth/email-already-in-use")

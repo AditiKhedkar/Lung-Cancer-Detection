@@ -17,6 +17,7 @@ export class UploadImageComponent implements OnInit {
   previous=true;
   demo=false
   spin=false;
+  percent;
   currentUser;
   imgSrc:any="../../../assets/ambi 1.png"
   constructor(private dataService:DataserviceService,
@@ -109,7 +110,11 @@ export class UploadImageComponent implements OnInit {
           this.emit("ambiguous")
       }
       newResult.result=this.result;
-         
+      let m=Math.max(res.confidence[0],res.confidence[1],res.confidence[2])
+      let acc=Math.floor(m*100);
+      this.percent=acc.toString()+"%";
+      newResult.accuracy=this.percent;
+
       this.upload=this.upload?false:true;
       this.spin=false
       event=null

@@ -16,6 +16,7 @@ export class MainPageComponent implements OnInit {
   goToLogin()
   {
     console.log("Login");
+      this.dataService.mode="login"
     this.router.navigateByUrl("login");
   }
   tryDemo()
