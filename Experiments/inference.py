@@ -1,4 +1,7 @@
-import tensorflow as tf
+# for deploying our server 
+#inference used for connecting backend ,frontend
+
+import tensorflow as tf 
 import pickle
 import preprocessing
 import matplotlib.pyplot as plt
