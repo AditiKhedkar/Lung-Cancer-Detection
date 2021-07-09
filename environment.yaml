@@ -210,4 +210,4 @@ dependencies:
     - tqdm==4.60.0
     - typeguard==2.12.0
 prefix: C:\ProgramData\Anaconda3\envs\Lung-Cancer-Detection
-
+   
